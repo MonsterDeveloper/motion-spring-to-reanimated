@@ -1,4 +1,3 @@
-
 import { expect, it } from "bun:test"
 // @ts-expect-error No types for internal findSpring function
 import { findSpring as findMotionSpring } from "../node_modules/motion-dom/dist/es/animation/generators/spring/find.mjs"
