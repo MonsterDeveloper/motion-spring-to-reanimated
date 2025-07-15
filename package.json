@@ -19,9 +19,11 @@
   "author": "Andrei Bobkov <me@ctoofeverything.dev> (https://ctoofeverything.dev)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated.git"
+    "url": "git+https://github.com/MonsterDeveloper/motion-spring-to-reanimated.git"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "license": "GPL-3.0-only",
   "sideEffects": false,
