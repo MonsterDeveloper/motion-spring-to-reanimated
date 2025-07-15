@@ -1,6 +1,55 @@
 import type { WithSpringConfig } from "react-native-reanimated"
 import type { MotionSpringOptions } from "./types.js"
 
+/**
+ * Converts framer-motion spring options to react-native-reanimated spring configuration.
+ * 
+ * @param options - Motion spring options object
+ * @returns WithSpringConfig object compatible with react-native-reanimated's withSpring
+ * 
+ * @example
+ * ```typescript
+ * // Simple bounce animation
+ * rotation.value = withSpring(180, motionSpringToReanimated({ bounce: 0.3 }));
+ * ```
+ * 
+ * @example
+ * ```typescript
+ * // Duration-based spring
+ * rotation.value = withSpring(180, motionSpringToReanimated({ 
+ *   duration: 800, 
+ *   bounce: 0.2 
+ * }));
+ * ```
+ * 
+ * @example
+ * ```typescript
+ * // Physics-based spring with custom parameters
+ * rotation.value = withSpring(180, motionSpringToReanimated({ 
+ *   stiffness: 100, 
+ *   damping: 15,
+ *   mass: 1
+ * }));
+ * ```
+ * 
+ * @example
+ * ```typescript
+ * // With velocity and from/to for better rest threshold mapping
+ * rotation.value = withSpring(180, motionSpringToReanimated({ 
+ *   bounce: 0.4,
+ *   velocity: 2,
+ *   from: 0,
+ *   to: 180
+ * }));
+ * ```
+ * 
+ * @remarks
+ * - If no parameters are specified, physics-based default options are used
+ * - If `bounce` or `duration` is specified, a duration-based spring is created
+ * - The `from` and `to` parameters help calculate better rest thresholds but are not required
+ * - Physics-based springs use: stiffness=100, damping=10, mass=1 by default
+ * - Duration-based springs automatically calculate stiffness and damping from duration/bounce
+ */
 export function motionSpringToReanimated(
 	options?: MotionSpringOptions,
 ): WithSpringConfig {

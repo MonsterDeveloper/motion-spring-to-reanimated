@@ -1,8 +1,17 @@
 {
   "name": "motion-spring-to-reanimated",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Convert framer-motion spring options to react-native-reanimated spring configuration",
+  "keywords": [
+    "react-native",
+    "reanimated",
+    "framer-motion",
+    "motion",
+    "spring",
+    "animation",
+    "converter",
+    "utility"
+  ],
   "homepage": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated",
   "bugs": {
     "url": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated/issues"
@@ -19,6 +28,7 @@
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",
+    "@changesets/cli": "^2.29.5",
     "@cto_of_everything/biome-config": "^2.0.0",
     "@types/bun": "latest",
     "motion-dom": "^12.23.5",
@@ -30,6 +40,7 @@
   "scripts": {
     "build": "bun ./scripts/build.sh",
     "typecheck": "tsc",
-    "check": "biome check"
+    "check": "biome check",
+    "prepublishOnly": "bun run build"
   }
 }
