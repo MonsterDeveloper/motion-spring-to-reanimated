@@ -1,0 +1,35 @@
+{
+  "name": "motion-spring-to-reanimated",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated",
+  "bugs": {
+    "url": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated/issues"
+  },
+  "author": "Andrei Bobkov <me@ctoofeverything.dev> (https://ctoofeverything.dev)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MonsterDeveloper/motion-spring-to-reanimated.git"
+  },
+  "files": ["dist"],
+  "main": "dist/index.js",
+  "license": "GPL-3.0-only",
+  "sideEffects": false,
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.1",
+    "@cto_of_everything/biome-config": "^2.0.0",
+    "@types/bun": "latest",
+    "motion-dom": "^12.23.5",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react-native-reanimated": ">=3.5.0"
+  },
+  "scripts": {
+    "build": "bun ./scripts/build.sh",
+    "typecheck": "tsc",
+    "check": "biome check"
+  }
+}
