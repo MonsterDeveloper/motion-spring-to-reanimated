@@ -129,7 +129,7 @@ const SPRING_DEFAULTS = {
 }
 
 /**
- * Re-implementation of framer-motion’s `findSpring`.
+ * Re-implementation of framer-motion's `findSpring`.
  * Converts (duration, bounce, velocity) → (stiffness, damping)
  */
 function findSpring({
@@ -206,8 +206,7 @@ function findSpring({
 	const ITERATIONS = 12
 	let undampedFreq = 5 / durationSec
 	for (let i = 0; i < ITERATIONS; i++) {
-		undampedFreq -=
-			(undampedFreq - envelope(undampedFreq)) / derivative(undampedFreq)
+		undampedFreq -= envelope(undampedFreq) / derivative(undampedFreq)
 	}
 
 	// 4. Convert to stiffness/damping
