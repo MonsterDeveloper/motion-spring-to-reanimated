@@ -1,6 +1,6 @@
 {
   "name": "motion-spring-to-reanimated",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert framer-motion spring options to react-native-reanimated spring configuration",
   "keywords": [
     "react-native",
